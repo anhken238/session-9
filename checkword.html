@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kiểm Tra chữ in hoa - thường</title>
+</head>
+
+<body>
+    <script>
+        function isfirtletterUpperCase(str) {
+            RegExp = /^[A-Z]/;
+            if (RegExp.test(str)) {
+                document.write(" \"ký tự đầu của chuỗi là in hoa nà\" " + "<br>");
+            }
+            else {
+                document.write(" \"ký tự đầu của chuỗi là in thường nà\" " + "<br>");
+            }
+        }
+        let astring = new isfirtletterUpperCase(prompt("Nhập Chuỗi"));
+    </script>
+</body>
+
+</html>
