@@ -37,10 +37,9 @@
         function cout(string) {
             var coutVowel = 0;
             var countConsonant = 0;
-           RegExp = /[ueoaiUEOAI]/
            
-            for (i = 1; i <= string.length; i++) {
-                if (string == RegExp.exec(string)) {
+            for ( var i = 0; i < string.length; i++) {
+                if (check(string[i])) {
                     coutVowel++;
                 }
                 else {
@@ -50,6 +49,15 @@
             document.write("Chuỗi này có " + coutVowel + "nguyên âm" + "<br>" + "Chuỗi này có " + countConsonant + "phụ âm")
         }
 
+        function check(str){
+            kiemtra=/[ueoaiUEOAI]/
+            if(kiemtra.test(str)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
         let astring = new cout(prompt("Nhập Chuỗi: "))
 
     </script>
