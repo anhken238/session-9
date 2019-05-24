@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đối tượng thông dụng</title>
+    <style>
+        body {
+            margin: auto;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Nhập ngày tháng năm sinh của bạn</h3>
+    Ngày :<input type="text" id="ngay"> <br />
+    Tháng :<input type="text" id="thang"><br />
+    Năm : <input type="text" id="nam"> <br />
+    Giờ :<input type="text" id="gio"> <br />
+    <input type="button" value="Live" onclick="timelive()">
+    <div id="resultYear"></div>
+    <div id ="resultMonth"></div>
+    <div id ="resultDate"></div>
+    <div id ="resultHour"></div>
+
+    <script>
+        var dnow = new Date();
+        function timelive() {
+            let date = parseInt(document.getElementById("ngay").value);
+            let month = parseInt(document.getElementById("thang").value);
+            let year = parseInt(document.getElementById("nam").value);
+            let hour = parseInt(document.getElementById("gio").value);
+            document.getElementById("resultYear").innerHTML = "tôi đã sống " + (((dnow.getFullYear() - year)*365) + date)+" ngày";
+            document.getElementById("resultMonth").innerHTML = "tôi đã sống " + (((dnow.getFullYear() - year)*12)+ month)+" tháng";
+            document.getElementById("resultDate").innerHTML = "tôi đã sống " + (dnow.getFullYear() - year)+" năm";
+            document.getElementById("resultHour").innerHTML = "tôi đã sống " + (((dnow.getFullYear() - year)*365*24)+hour)+" giờ";
+        }
+
+    </script>
+</body>
+
+</html>
